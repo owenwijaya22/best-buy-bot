@@ -43,7 +43,7 @@ headers = {
     'https://www.bestbuy.com/site/asus-geforce-rtx-3080-10gb-gddr6x-pci-express-4-0-strix-graphics-card-black/6432445.p?skuId=6432445&intl=nosplash',
     'sec-fetch-dest': 'empty',
     'sec-fetch-site': 'same-origin',
-    'sec-fetch-mode': 'cors' 
+    'sec-fetch-mode': 'cors'
 }
 if getattr(sys, 'frozen', False):
     chrome_driver = os.path.join(sys._MEIPASS, 'chromedriver.exe')
