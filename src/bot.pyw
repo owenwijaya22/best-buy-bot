@@ -60,7 +60,7 @@ def check():
         with open('./log.txt', 'a', encoding='utf-8') as (file):
             file.write('Bot is making new request...\n')
         response = requests.get(link, headers=headers)
-        response_formatted = json.loads(
+        response_formatted = json.load(
             response.content.decode('utf-8-sig').encode('utf-8'))
         with open('./log.txt', 'a', encoding='utf-8') as (file):
             file.write('Bot is parsing the new request...\n')
